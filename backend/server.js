@@ -1,12 +1,14 @@
 import express from "express"
 import dotenv from "dotenv"
 import { initDB, sql } from "./config/db.js"
+import rateLimiter from "./middleware/rateLimiter.js"
 
 dotenv.config()
 
 const app = express()
 
 app.use(express.json())
+app.use(rateLimiter)
 const PORT = process.env.PORT || 5001
 
 app.get("/", (req, res) => {
