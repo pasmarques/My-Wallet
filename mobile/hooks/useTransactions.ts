@@ -44,11 +44,23 @@ export const useTransactions = (userId: string | null | undefined) => {
 
     try {
       const res = await fetch(`${API_URL}/transactions/summary/${userId}`);
-      const data: Summary = await res.json();
+      
+      if (!res.ok) {
+        console.error("Summary API response not ok:", res.status, res.statusText);
+        return;
+      }
+
+      const data = await res.json();
+     
+      const balance = typeof data.balance === 'number' ? data.balance : parseFloat(data.balance) || 0;
+      const income = typeof data.income === 'number' ? data.income : parseFloat(data.income) || 0;
+      const expenses = typeof data.expenses === 'number' ? data.expenses : parseFloat(data.expenses) || 0;
+      
+  
       setSummary({
-        balance: typeof data.balance === 'number' ? data.balance : 0,
-        income: typeof data.income === 'number' ? data.income : 0,
-        expenses: typeof data.expenses === 'number' ? data.expenses : 0,
+        balance,
+        income,
+        expenses,
       });
     } catch (e: unknown) {
       console.error("Error fetching summary:", e);

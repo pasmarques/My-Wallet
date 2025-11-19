@@ -3,7 +3,8 @@ import { Link, useRouter } from "expo-router";
 import { Alert, FlatList, Image, RefreshControl, Text, TouchableOpacity, View } from "react-native";
 import { SignOutButton } from "@/components/SignOutButton";
 import { useTransactions } from "../../hooks/useTransactions";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { useFocusEffect } from "@react-navigation/native";
 import PageLoader from "../../components/PageLoader";
 import { styles } from "@/styles/home.styles";
 import { Ionicons } from "@expo/vector-icons";
@@ -19,7 +20,7 @@ export default function Page() {
   const { transactions, summary, isLoading, loadData, deleteTransaction } = useTransactions(
     user?.id
   );
-
+  
   const onRefresh = async () => {
     setRefreshing(true);
     await loadData();
@@ -29,6 +30,14 @@ export default function Page() {
   useEffect(() => {
     loadData();
   }, [loadData]);
+
+  useFocusEffect(
+    useCallback(() => {
+      if (user?.id) {
+        loadData();
+      }
+    }, [loadData, user?.id])
+  );
 
   const handleDelete = (id: string | number) => {
     Alert.alert("Delete Transaction", "Are you sure you want to delete this transaction?", [
