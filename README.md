@@ -2,7 +2,7 @@
 
 Uma aplicação mobile completa de gestão financeira pessoal desenvolvida com React Native e Expo. Permite que usuários controlem suas finanças de forma simples e intuitiva, registrando receitas, despesas e acompanhando seu saldo em tempo real.
 
-![App Screenshot](assets/screenshots/home-screen.png)
+![App Screenshot](./mobile/assets/screenshots/home-screen.jpeg)
 <!-- Adicione aqui uma imagem da tela principal do aplicativo -->
 
 ## 📋 Índice
@@ -22,9 +22,6 @@ Uma aplicação mobile completa de gestão financeira pessoal desenvolvida com R
 
 React Native Wallet é uma solução completa para gestão financeira pessoal, oferecendo uma interface moderna e intuitiva para controle de receitas e despesas. O aplicativo permite que usuários registrem transações financeiras, categorizem seus gastos e visualizem um resumo completo de suas finanças.
 
-![App Features](assets/screenshots/features.png)
-<!-- Adicione aqui uma imagem destacando as principais funcionalidades -->
-
 ## ✨ Funcionalidades
 
 ### 🔐 Autenticação
@@ -43,9 +40,6 @@ React Native Wallet é uma solução completa para gestão financeira pessoal, o
 - **Resumo de receitas** e despesas
 - **Atualização automática** ao retornar para a tela principal
 - **Pull-to-refresh** para atualização manual
-
-![Dashboard](assets/screenshots/dashboard.png)
-<!-- Adicione aqui uma imagem do dashboard com o card de saldo -->
 
 ## 🛠 Tecnologias Utilizadas
 
@@ -176,9 +170,6 @@ cd mobile
 npm start
 ```
 
-![Setup](assets/screenshots/setup.png)
-<!-- Adicione aqui uma imagem do processo de setup ou configuração -->
-
 ## 📱 Como Usar
 
 ### Primeiro Acesso
@@ -186,9 +177,6 @@ npm start
 1. **Cadastre-se**: Toque em "Sign up" na tela inicial
 2. **Verifique seu email**: Confirme o código enviado por email
 3. **Faça login**: Entre com suas credenciais
-
-![Auth Flow](assets/screenshots/auth-flow.png)
-<!-- Adicione aqui imagens do fluxo de autenticação (login/signup) -->
 
 ### Criando uma Transação
 
@@ -199,7 +187,7 @@ npm start
 5. Selecione uma categoria
 6. Toque em **"Save"** para salvar
 
-![Create Transaction](assets/screenshots/create-transaction.png)
+![Create Transaction](./mobile/assets/screenshots/create-screen.jpeg)
 <!-- Adicione aqui uma imagem da tela de criação de transação -->
 
 ### Visualizando o Dashboard
@@ -269,19 +257,19 @@ A API possui rate limiting configurado via Upstash Redis para prevenir abuso.
 ## 📸 Capturas de Tela
 
 ### Tela Principal
-![Home Screen](assets/screenshots/home-screen.jpeg)
+![Home Screen](./mobile/assets/screenshots/home-screen.jpeg)
 
 
 ### Tela de Criação
-![Create Screen](assets/screenshots/create-screen.jpeg)
+![Create Screen](./mobile/assets/screenshots/create-screen.jpeg)
 <!-- Adicione aqui a captura de tela da tela de criação -->
 
 ### Tela de Login
-![Login Screen](assets/screenshots/login-screen.jpeg)
+![Login Screen](./mobile/assets/screenshots/login-screen.jpeg)
 <!-- Adicione aqui a captura de tela da tela de login -->
 
 ### Tela de Cadastro
-![Signup Screen](assets/screenshots/signup-screen.jpeg)
+![Signup Screen](./mobile/assets/screenshots/signup-screen.jpeg)
 <!-- Adicione aqui a captura de tela da tela de cadastro -->
 
 ## 🤝 Contribuindo
