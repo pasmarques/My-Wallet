@@ -10,6 +10,7 @@ import { styles } from "@/styles/home.styles";
 import { Ionicons } from "@expo/vector-icons";
 import { BalanceCard } from "../../components/BalanceCard";
 import { TransactionItem } from "../../components/TransactionItem";
+import NoTransactionsFound from "@/components/NoTransactionsFound";
 
 
 export default function Page() {
@@ -87,7 +88,7 @@ export default function Page() {
         contentContainerStyle={styles.transactionsListContent}
         data={transactions}
         renderItem={({ item }) => <TransactionItem item={item} onDelete={handleDelete} />}
-        ListEmptyComponent={<Text>Vazio</Text>}
+        ListEmptyComponent={<NoTransactionsFound />}
         showsVerticalScrollIndicator={false}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}
       />
